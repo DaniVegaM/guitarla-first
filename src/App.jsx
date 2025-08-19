@@ -16,6 +16,8 @@ function App() {
   const [cart, setCart] = useState(initialCart)
   const MAX_ITEMS = 5
 
+   //NOTA: El state en React es asincrono, lo que significa que si lees el valor del state inmediatamente despues de usar "setState" podrías
+  //Obtener un valor anterior, para leerlo 
   useEffect(() =>{
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
